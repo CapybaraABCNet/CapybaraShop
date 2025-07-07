@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #ff6f61, #de5c8f);
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px; /* Размер логотипа */
+    margin-right: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.cta .btn {
+    background-color: #fff;
+    color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #ff6f61;
+    color: white;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0f7fa;
+}
+.m {
+    color:rgb(0, 0, 0);
+    border-radius: 15px; /* Сглаженные углы */
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+    
+}
+@keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        img {
+            width: 300px; /* Ширина изображения */
+            border-radius: 15px; /* Сглаженные углы для изображения */
+            opacity: 0;
+            animation: imageFadeIn 2s forwards;
+            display: block; /* Отображение изображения как блочного элемента */
+            margin: 20px auto; /* Центрирование изображения */
+        }
+
+        @keyframes imageFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .product {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.7);
+}
+ button {
+            background-color: aqua;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+input {
+    padding: 10px; /* Отступ внутри поля */
+    border: 2px solid #ccc; /* Цвет рамки */
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    width: 100%; /* Ширина 100% от родительского элемента */
+    box-sizing: border-box; /* Учитывать отступы и границы в ширине */
+    transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+
+/* Стили для текстовых полей */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 15px; /* Отступ снизу между полями */
+}
+
+/* Стили при фокусе */
+input:focus {
+    border-color: #007BFF; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+
+/* Стили для кнопок */
+input[type="submit"],
+button {
+    background-color: #007BFF; /* Цвет фона кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+/* Изменение цвета фона кнопки при наведении */
+input[type="submit"]:hover,
+button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+
+/* Стили для текстовых областей (textarea) */
+textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    height: 100px; /* Высота текстовой области */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Стили для textarea при фокусе */
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
